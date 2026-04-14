@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulldog Francês - Cachorros</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .breed-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            align-items: center;
+            padding: var(--spacing-3xl) 0;
+            background-color: var(--color-bg);
+        }
+
+        .breed-hero__content h1 {
+            font-size: var(--font-4xl);
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .breed-hero__image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            object-fit: cover;
+        }
+
+        .breed-info {
+            background-color: var(--color-white);
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .breed-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-2xl) 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .breed-table thead {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .breed-table th,
+        .breed-table td {
+            padding: var(--spacing-lg);
+            text-align: left;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .breed-table tbody tr:hover {
+            background-color: var(--color-bg-alt);
+        }
+
+        .breed-origin {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            align-items: center;
+            padding: var(--spacing-3xl) 0;
+            background-color: var(--color-bg);
+        }
+
+        .breed-origin__image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            object-fit: cover;
+            order: 2;
+        }
+
+        .breed-origin__content {
+            order: 1;
+        }
+
+        .breed-origin h2 {
+            font-size: var(--font-3xl);
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .breed-origin ul {
+            list-style-position: inside;
+            margin-left: var(--spacing-lg);
+        }
+
+        .breed-origin li {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+
+        .characteristic {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: 20px;
+            margin: var(--spacing-sm);
+            font-size: var(--font-sm);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .breed-hero,
+            .breed-origin {
+                grid-template-columns: 1fr;
+            }
+
+            .breed-origin__image {
+                order: 1;
+            }
+
+            .breed-origin__content {
+                order: 2;
+            }
+
+            .breed-hero__content h1 {
+                font-size: var(--font-3xl);
+            }
+
+            .breed-origin h2 {
+                font-size: var(--font-2xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <h1 class="logo">Cachorros</h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="./home.html" class="nav__link">Home</a></li>
+                    <li><a href="./raca.html" class="nav__link nav__link--active">Raças</a></li>
+                    <li><a href="#" class="nav__link">Saúde</a></li>
+                    <li><a href="#" class="nav__link">Adoção</a></li>
+                    <li><a href="#" class="nav__link">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="breed-hero">
+            <div class="container" style="grid-column: 1 / -1;">
+                <div class="breed-hero" style="grid-template-columns: 1fr 1fr; padding: 0;">
+                    <div class="breed-hero__content">
+                        <h1>Bulldog Francês</h1>
+                        <p style="font-size: var(--font-lg); color: var(--color-text-light); line-height: 1.8;">
+                            O Bulldog Francês é um cão compacto, musculoso e carismático que conquistou corações em todo o mundo. 
+                            Apesar de seu tamanho pequeno, possui uma grande personalidade cheia de charme e brincadeiras. 
+                            Ideal para a vida urbana em apartamentos, ese cão é o companheiro perfeito para quem busca um bom amigo leal.
+                        </p>
+                    </div>
+                    <div class="breed-hero__image-wrapper">
+                        <img src="../assets/buldog.png" alt="Bulldog Francês" class="breed-hero__image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="breed-info">
+            <div class="container">
+                <h2 class="section__title">Características Gerais</h2>
+
+                <table class="breed-table">
+                    <thead>
+                        <tr>
+                            <th>Raça</th>
+                            <th>Porte</th>
+                            <th>Temperamento</th>
+                            <th>Expectativa</th>
+                            <th>Energia</th>
+                            <th>Apartamento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bulldog Francês</strong></td>
+                            <td>Pequeno</td>
+                            <td>Brincalhão & Adaptável</td>
+                            <td>10–12 anos</td>
+                            <td>Média</td>
+                            <td style="font-weight: 600; color: var(--color-success);">Sim</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin: var(--spacing-2xl) 0;">
+                    <h3 style="color: var(--color-primary); margin-bottom: var(--spacing-lg);">Tags Principais</h3>
+                    <div>
+                        <span class="characteristic">Carismático</span>
+                        <span class="characteristic">Compacto</span>
+                        <span class="characteristic">Brincalhão</span>
+                        <span class="characteristic">Leal</span>
+                        <span class="characteristic">Adaptável</span>
+                        <span class="characteristic">Afetuoso</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="breed-origin">
+            <div class="container" style="grid-column: 1 / -1;">
+                <div class="breed-origin" style="grid-template-columns: 1fr 1fr; padding: 0;">
+                    <div class="breed-origin__content">
+                        <h2>Origem</h2>
+                        <ul>
+                            <li><strong>País de Origem:</strong> França</li>
+                            <li><strong>Século de Desenvolvimento:</strong> XIX</li>
+                            <li><strong>Propósito Original:</strong> Cão de companhia e entretenimento</li>
+                            <li><strong>Ancestrais:</strong> Resultado do cruzamento entre Bulldogs ingleses e Terriers franceses</li>
+                            <li><strong>Reconhecimento:</strong> Oficialmente reconhecido como raça em 1898 na França</li>
+                        </ul>
+                        <p style="margin-top: var(--spacing-lg); color: var(--color-text-light);">
+                            O Bulldog Francês foi desenvolvido na França durante o século XIX, originado do cruzamento entre 
+                            Bulldogs ingleses e Terriers locais franceses. Tornou-se extremamente popular na sociedade parisiense 
+                            e se mantém como um dos cães de companhia mais queridos em todo o mundo.
+                        </p>
+                    </div>
+                    <img src="../assets/buldog.png" alt="Bulldog Francês - Origem" class="breed-origin__image">
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison" style="padding: var(--spacing-3xl) 0;">
+            <div class="container">
+                <h2 class="section__title">Comportamento & Cuidados</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-2xl);">
+                    <div style="background-color: var(--color-white); padding: var(--spacing-lg); border-radius: 8px; box-shadow: var(--shadow-md);">
+                        <h3 style="color: var(--color-primary); margin-bottom: var(--spacing-md);">Temperamento</h3>
+                        <p style="color: var(--color-text-light);">
+                            Bulldogs Franceses são cães extremamente carismáticos, afetuosos e brincalhões. Adoram estar perto de 
+                            seus donos e são excelentes com crianças e outros animais. Possuem uma personalidade grande em um corpo pequeno, 
+                            sempre querendo fazer graças e chamar atenção.
+                        </p>
+                    </div>
+
+                    <div style="background-color: var(--color-white); padding: var(--spacing-lg); border-radius: 8px; box-shadow: var(--shadow-md);">
+                        <h3 style="color: var(--color-primary); margin-bottom: var(--spacing-md);">Exercício</h3>
+                        <p style="color: var(--color-text-light);">
+                            Esses cães possuem níveis de energia moderados. Precisam de passeios diários, mas não requerem exercício 
+                            intenso como outras raças. São perfeitos para apartamentos urbanos. Importante evitar atividade vigorosa 
+                            em climas quentes devido à sensibilidade respiratória.
+                        </p>
+                    </div>
+
+                    <div style="background-color: var(--color-white); padding: var(--spacing-lg); border-radius: 8px; box-shadow: var(--shadow-md);">
+                        <h3 style="color: var(--color-primary); margin-bottom: var(--spacing-md);">Cuidados Especiais</h3>
+                        <p style="color: var(--color-text-light);">
+                            Bulldogs Franceses têm focinho curto e requerem cuidados especiais em climas quentes. Banhos regulares, 
+                            limpeza de dobras de pele e monitoramento de saúde respiratória são essenciais. Nécessitam acompanhamento 
+                            veterinário regular para prevenir problemas oftalmológicos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__about">
+                <h3 class="footer__title">Cãopanheiro Fiel</h3>
+                <p>
+                    Especialistas em bem-estar canino. Nossa missão é fortalecer laços entre humanos
+                    e seus melhores amigos.
+                </p>
+            </div>
+
+            <div class="footer__nav">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#">Dicas</a></li>
+                    <li><a href="#">Raças</a></li>
+                    <li><a href="#">Saúde</a></li>
+                    <li><a href="#">Adoção</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__legal">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__contact">
+                <h4>Fale Conosco</h4>
+                <p>contato@cachorros.com.br</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

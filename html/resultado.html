@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Quiz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .result-container {
+            max-width: 800px;
+            margin: var(--spacing-3xl) auto;
+            padding: var(--spacing-2xl);
+            background-color: var(--color-white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .result-container h1 {
+            text-align: center;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .result-container h2 {
+            color: var(--color-primary);
+            margin-top: var(--spacing-2xl);
+            margin-bottom: var(--spacing-lg);
+            border-bottom: 3px solid var(--color-primary);
+            padding-bottom: var(--spacing-md);
+        }
+
+        .result-container ol {
+            margin-left: var(--spacing-2xl);
+            line-height: 2;
+        }
+
+        .result-container li {
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-text);
+        }
+
+        .result-container strong {
+            color: var(--color-success);
+            background-color: var(--color-bg-alt);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 4px;
+        }
+
+        .result-actions {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+            flex-wrap: wrap;
+        }
+
+        .result-actions button {
+            flex: 1;
+            min-width: 200px;
+            padding: var(--spacing-lg) var(--spacing-2xl);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: 6px;
+            font-size: var(--font-lg);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .result-actions button:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <h1 class="logo">Cachorros</h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../html/home.html" class="nav__link">Home</a></li>
+                    <li><a href="../html/raca.html" class="nav__link">Raças</a></li>
+                    <li><a href="#" class="nav__link">Saúde</a></li>
+                    <li><a href="#" class="nav__link">Adoção</a></li>
+                    <li><a href="#" class="nav__link">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="result-container">
+            <h1>Resultado do Quiz</h1>
+            <p style="text-align: center; color: var(--color-text-light);">
+                Obrigado por participar! Confira o gabarito abaixo.
+            </p>
+
+            <h2>Gabarito das Questões</h2>
+            <ol>
+                <li>Qual é a raça de cão mais popular no Brasil? <strong>Vira-Lata</strong></li>
+                <li>Qual é a expectativa de vida média de um cão? <strong>8-12 anos</strong></li>
+                <li>Qual é a raça de cão mais rápida do mundo? <strong>Greyhound</strong></li>
+                <li>Qual é a raça de cão mais inteligente? <strong>Border Collie</strong></li>
+                <li>Qual é a raça de cão mais antiga do mundo? <strong>Saluki</strong></li>
+            </ol>
+
+            <div class="result-actions">
+                <button onclick="window.location.href='quiz.html'">Voltar ao Quiz</button>
+                <button onclick="window.location.href='home.html'">Ir para Home</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__about">
+                <h3 class="footer__title">Cãopanheiro Fiel</h3>
+                <p>
+                    Especialistas em bem-estar canino. Nossa missão é fortalecer laços entre humanos
+                    e seus melhores amigos.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

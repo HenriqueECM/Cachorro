@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sobre Cachorros</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .quiz-container {
+            max-width: 800px;
+            margin: var(--spacing-3xl) auto;
+            padding: var(--spacing-2xl);
+            background-color: var(--color-white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .quiz-container h1 {
+            text-align: center;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .question {
+            margin-bottom: var(--spacing-2xl);
+            padding: var(--spacing-lg);
+            background-color: var(--color-bg-alt);
+            border-radius: 8px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .question label {
+            font-weight: 600;
+            color: var(--color-text);
+            display: block;
+            margin-bottom: var(--spacing-lg);
+            font-size: var(--font-lg);
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            margin-left: var(--spacing-lg);
+        }
+
+        .options input[type="radio"] {
+            margin-right: var(--spacing-md);
+            cursor: pointer;
+            accent-color: var(--color-primary);
+        }
+
+        .options label {
+            display: inline;
+            font-weight: normal;
+            margin-bottom: 0;
+            font-size: var(--font-base);
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: var(--spacing-lg) var(--spacing-2xl);
+            margin-top: var(--spacing-2xl);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: 6px;
+            font-size: var(--font-lg);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <h1 class="logo">Cachorros</h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../html/home.html" class="nav__link">Home</a></li>
+                    <li><a href="../html/raca.html" class="nav__link">Raças</a></li>
+                    <li><a href="#" class="nav__link">Saúde</a></li>
+                    <li><a href="#" class="nav__link">Adoção</a></li>
+                    <li><a href="#" class="nav__link">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="quiz-container">
+            <h1>O Cão Ideal para Você</h1>
+            <p style="text-align: center; color: var(--color-text-light); margin-bottom: var(--spacing-2xl);">
+                Responda este quiz para descobrir qual raça de cão combina mais com seu estilo de vida!
+            </p>
+            
+            <form action="resultado.html" method="GET">
+                <div class="question">
+                    <label for="q1"><strong>1. Qual é a raça de cão mais popular no Brasil?</strong></label>
+                    <div class="options">
+                        <input type="radio" id="q1a" name="q1" value="a">
+                        <label for="q1a">a) Pastor Alemão</label>
+                        <input type="radio" id="q1b" name="q1" value="b">
+                        <label for="q1b">b) Rottweiler</label>
+                        <input type="radio" id="q1c" name="q1" value="c">
+                        <label for="q1c">c) Vira-Lata</label>
+                        <input type="radio" id="q1d" name="q1" value="d">
+                        <label for="q1d">d) Shih Tzu</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label for="q2"><strong>2. Qual é a expectativa de vida média de um cão?</strong></label>
+                    <div class="options">
+                        <input type="radio" id="q2a" name="q2" value="a">
+                        <label for="q2a">a) 5-7 anos</label>
+                        <input type="radio" id="q2b" name="q2" value="b">
+                        <label for="q2b">b) 8-12 anos</label>
+                        <input type="radio" id="q2c" name="q2" value="c">
+                        <label for="q2c">c) 13-15 anos</label>
+                        <input type="radio" id="q2d" name="q2" value="d">
+                        <label for="q2d">d) 16-20 anos</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label for="q3"><strong>3. Qual é a raça de cão mais rápida do mundo?</strong></label>
+                    <div class="options">
+                        <input type="radio" id="q3a" name="q3" value="a">
+                        <label for="q3a">a) Greyhound</label>
+                        <input type="radio" id="q3b" name="q3" value="b">
+                        <label for="q3b">b) Saluki</label>
+                        <input type="radio" id="q3c" name="q3" value="c">
+                        <label for="q3c">c) Whippet</label>
+                        <input type="radio" id="q3d" name="q3" value="d">
+                        <label for="q3d">d) Borzoi</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label for="q4"><strong>4. Qual é a raça de cão mais inteligente?</strong></label>
+                    <div class="options">
+                        <input type="radio" id="q4a" name="q4" value="a">
+                        <label for="q4a">a) Border Collie</label>
+                        <input type="radio" id="q4b" name="q4" value="b">
+                        <label for="q4b">b) Poodle</label>
+                        <input type="radio" id="q4c" name="q4" value="c">
+                        <label for="q4c">c) Pastor Alemão</label>
+                        <input type="radio" id="q4d" name="q4" value="d">
+                        <label for="q4d">d) Golden Retriever</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label for="q5"><strong>5. Qual é a raça de cão mais antiga do mundo?</strong></label>
+                    <div class="options">
+                        <input type="radio" id="q5a" name="q5" value="a">
+                        <label for="q5a">a) Basenji</label>
+                        <input type="radio" id="q5b" name="q5" value="b">
+                        <label for="q5b">b) Saluki</label>
+                        <input type="radio" id="q5c" name="q5" value="c">
+                        <label for="q5c">c) Afghan Hound</label>
+                        <input type="radio" id="q5d" name="q5" value="d">
+                        <label for="q5d">d) Chow Chow</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Respostas</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__about">
+                <h3 class="footer__title">Cãopanheiro Fiel</h3>
+                <p>
+                    Especialistas em bem-estar canino. Nossa missão é fortalecer laços entre humanos
+                    e seus melhores amigos.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+                    <input type="radio" id="q3b" name="q3" value="b">
+                    <label for="q3b">b) Saluki</label><br>
+                    <input type="radio" id="q3c" name="q3" value="c">
+                    <label for="q3c">c) Whippet</label><br>
+                    <input type="radio" id="q3d" name="q3" value="d">
+                    <label for="q3d">d) Borzoi</label><br>
+                </div>
+            </div>
+            <div class="question">
+                <label for="q4"><strong>4. Qual é a raça de cão mais inteligente?</strong></label><br><br>
+                <div class="options">
+                    <input type="radio" id="q4a" name="q4" value="a">
+                    <label for="q4a">a) Border Collie</label><br>
+                    <input type="radio" id="q4b" name="q4" value="b">
+                    <label for="q4b">b) Poodle</label><br>
+                    <input type="radio" id="q4c" name="q4" value="c">
+                    <label for="q4c">c) Pastor Alemão</label><br>
+                    <input type="radio" id="q4d" name="q4" value="d">
+                    <label for="q4d">d) Golden Retriever</label><br>
+                </div>
+            </div>
+            <div class="question">
+                <label for="q5"><strong>5. Qual é a raça de cão mais antiga do mundo?</strong></label><br><br>
+                <div class="options">
+                    <input type="radio" id="q5a" name="q5" value="a">
+                    <label for="q5a">a) Basenji</label><br>
+                    <input type="radio" id="q5b" name="q5" value="b">
+                    <label for="q5b">b) Saluki</label><br>
+                    <input type="radio" id="q5c" name="q5" value="c">
+                    <label for="q5c">c) Afghan Hound</label><br>
+                    <input type="radio" id="q5d" name="q5" value="d">
+                    <label for="q5d">d) Chow Chow</label><br>
+                </div>
+            </div>
+            <br><br>
+            <input type="submit" value="Enviar Respostas" class="submit-btn" href="resultado.html"style="width: 600px; height: 150px; font-size: 58px;">
+        </form>
+    </div>
+   <br><br><br><br><br><br><br>
+        <p>&copy; Quiz sobre cachorros. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
